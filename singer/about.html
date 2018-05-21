@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- niezbedne do strony responsywnej, zapobiega skalowaniu -->
+	<title>MLM_singer</title>
+	<meta name="description" content="French-Moroccan singer">
+	<meta name="keywords" content="singer, music, musician, moroccan singer, french singer, artist, cover, chanteur">
+	<meta name="author" content="dasza fiodorowa">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="main.css" type="text/css">
+	<link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+	<script type="text/javascript">
+        
+        var number = Math.floor(Math.random()*6)+1;
+        
+        function hideSlide()
+        {
+            $("#slider").fadeOut(500);
+        }
+        
+        function changeSlide()
+        {
+            number++; if (number>5) number = 1;
+            
+            var plik = "<img src=\"img/slides/s" + number + ".jpg\" />";
+            
+            document.getElementById("slider").innerHTML = plik;
+            $("#slider").fadeIn(500);
+            
+            setTimeout("changeSlide()", 3000);
+            setTimeout("hideSlide()", 2500);
+            
+        }
+    
+    </script>
+	
+</head>
+
+<body onload="changeSlide()">
+   
+    <header>
+    
+         <nav>   
+            <ul class="topnav">
+            <li><a class="active" href="index.html">home</a></li>
+            <li><a href="videos.html">videos</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+      <div style="clear: both;"></div>
+     </header>
+     
+    <main>
+      <div class="container">
+      
+          <header id="mlm">
+              <h1>MLM singer - Mamoun Laraqui</h1>
+              <p>Franch-Moroccan performer with inimitable voice, granular and powerful</p>
+          </header>
+          
+          <br>
+          
+          <article>
+              <div id="slider"></div>
+          </article>
+          
+          <article>
+              <h3>Biography</h3>
+              <p id="biography">After a childhood in a French high school in the Moroccan capital and obtaining a bachelor's degree in science, Mamoun          decided to reorient himself towards higher studies in applied arts.
+                 Master in visual communication in his pocket, he emigrates a few months in China to discover a new culture and learn the language, it is there     that he decides to create his own brand of fashion accessories (www.fkbrands. com).
+                 During all these years, Mamoun has always been passionate about singing without really being aware of its potential. This awareness will take place the day he decides to start singing lessons at the beginning of 2013. Since that day, singing and stage have become his top priority.</p>
+          </article>
+      
+      </div>
+   </main>
+    
+    <div id="footer">
+        &copy;2018 mlm_singer
+    </div>
+    
+</body>
+</html>
